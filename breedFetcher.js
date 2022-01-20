@@ -10,7 +10,7 @@ const fetchBreedDescription = (breedName, callback) => {
     if (!error) {
       // If no error but no breed was found
       if (data.length === 0) {
-        callback(null, "Breed not found.");
+        callback("Breed not found.", null);
       } else if (data) {
       // If breed was entered output description
         callback(null, data[0].description);
